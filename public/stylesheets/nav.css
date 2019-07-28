@@ -1,0 +1,34 @@
+#nav-main-container {
+    position : fixed;
+    width : 100%;
+    height : 8vh;
+    display : flex;
+    justify-content: space-between;
+    padding : 1%;
+    background-color: #09092a;
+    color : white;
+    border-bottom : 1px solid white;
+}
+
+#nav-main-container img {
+    width : 5vw;
+}
+
+#nav-left-container {
+    width : 20%;
+    display : flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left : 1%;
+}
+
+#nav-right-container {
+    width : 30%;
+    display : flex;
+    flex-direction : row;
+    justify-content: space-around;
+}
+
+.nav-list-item {
+    width : 20%;
+}
