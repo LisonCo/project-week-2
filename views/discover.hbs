@@ -2,9 +2,11 @@
 
 <div id="discover-main-container">
 
-    {{#each pictures }}
+    {{#each pictures}}
 
-    {{ pictures.name }}
+    {{ data.name }}
+
+    <a href="/discover/{{ id }}"><img src="{{ data.image_files.[0].file_url }}"></a>
 
     {{/each}}
 

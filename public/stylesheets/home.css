@@ -1,14 +1,6 @@
-body {
+#home-main-container {
+    background-image: url('../images/homepage.jpg');
     background-size: cover;
-}
-
-#central-container {
-    width : 50%;
-    height : 60vh;
-    background-color: #09092a;
-    color : white;
-    border : 2px solid #000000;
-    border-radius: 40px;
-    margin : 25vh 25%;
-    text-align : center;
+    height : 100vh;
+    width : 100vw;
 }
