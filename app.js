@@ -11,6 +11,7 @@ app.use (express.static('public'))
 
 const home = require('./routes/home');
 app.use('/', home);
+
 const discover = require ('./routes/images');
 app.use('/', discover);
 
@@ -19,6 +20,9 @@ app.use('/', login);
 
 const signup = require('./routes/signup');
 app.use('/', signup);
+
+const image = require ('./routes/images');
+app.use('/', image);
 
 module.exports = app;
 

@@ -1,0 +1,16 @@
+{{> nav }}
+
+<div id="image-main-container">
+
+{{#pictures}}
+
+<img src="{{ data.image_files.[0].file_url }}">
+
+{{ data.name }}
+
+{{ data.description }}
+
+{{/pictures}}
+
+</div>
+

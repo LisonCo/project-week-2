@@ -2,3 +2,7 @@
     height : 90vh;
     margin : 20vh;
 }
+
+#discover-main-container img {
+    width : 100px;
+}
