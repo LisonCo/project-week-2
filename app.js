@@ -24,6 +24,9 @@ app.use('/', signup);
 const image = require ('./routes/images');
 app.use('/', image);
 
+const live = require ('./routes/live');
+app.use('/', live)
+
 module.exports = app;
 
 app.listen(3000)
