@@ -1,0 +1,79 @@
+.infoBackground {
+  background-image: url("https://data.whicdn.com/images/317639507/large.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  height: 15vh;
+  width: 30vw;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 70px;
+}
+
+#form2 {
+  margin: 0px auto;
+  width: 90vw;
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 90vh;
+  line-height: 40px;
+}
+
+
+#form2 label {
+  color: white;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+}
+
+#form2 input,
+#form2 button {
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: 0;
+  padding: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#form2 button {
+  background: #09092a;
+  border: 1px solid #09092a;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s ease background;
+  width: 100%;
+}
+
+#form2 button:hover {
+  background: #fff;
+  color: #09092a;
+  transition: .3s ease background;
+}
