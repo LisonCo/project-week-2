@@ -1,6 +1,10 @@
 @import "nav.css";
 @import "home.css";
 @import "discover.css";
+@import "login.css";
+@import "signup.css";
+@import "error-message.css";
+
 
 body {
     margin : 0;

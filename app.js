@@ -1,3 +1,4 @@
+
 const express = require('express');
 const app = express();
 const hbs = require("hbs");
@@ -12,6 +13,12 @@ const home = require('./routes/home');
 app.use('/', home);
 const discover = require ('./routes/images');
 app.use('/', discover);
+
+const login = require('./routes/login');
+app.use('/', login);
+
+const signup = require('./routes/signup');
+app.use('/', signup);
 
 module.exports = app;
 

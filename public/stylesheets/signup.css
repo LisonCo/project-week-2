@@ -1,0 +1,60 @@
+.top-padding {
+  padding-top: 360px;
+}
+
+.background2 {
+  background-image: url("https://cdn.mos.cms.futurecdn.net/vPJhr7f7rT5CKVm6dFhcjk.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#form {
+  margin: 0 auto;
+  width: 380px;
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 30vh;
+  line-height: 45px;
+}
+
+#form label {
+  color: white;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+}
+
+#form input,
+#form button {
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: 0;
+  padding: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#form button {
+  background: #09092a;
+  border: 1px solid #09092a;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s ease background;
+  width: 100%;
+}
+
+#form button:hover {
+  background: #fff;
+  color: #09092a;
+  transition: .3s ease background;
+}
