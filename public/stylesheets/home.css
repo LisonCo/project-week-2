@@ -1,6 +1,14 @@
-#home-main-container {
-    background-image: url("../images/homebackground.png");
+body {
     background-size: cover;
-    width : 100%;
-    height : 100vh;
+}
+
+#central-container {
+    width : 50%;
+    height : 60vh;
+    background-color: #09092a;
+    color : white;
+    border : 2px solid #000000;
+    border-radius: 40px;
+    margin : 25vh 25%;
+    text-align : center;
 }

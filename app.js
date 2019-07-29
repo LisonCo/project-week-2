@@ -1,4 +1,3 @@
- lisonCSS
 const express = require('express');
 const app = express();
 const hbs = require("hbs");
@@ -8,13 +7,13 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 app.use (express.static('public'))
 
+
 const home = require('./routes/home');
 app.use('/', home);
+const discover = require ('./routes/images');
+app.use('/', discover);
 
 module.exports = app;
 
 app.listen(3000)
 
-//new changes
-//second changes
- master
