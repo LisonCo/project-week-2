@@ -8,8 +8,11 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 app.use (express.static('public'))
 
+
 const home = require('./routes/home');
 app.use('/', home);
+const discover = require ('./routes/images');
+app.use('/', discover);
 
 const login = require('./routes/login');
 app.use('/', login);
@@ -20,5 +23,4 @@ app.use('/', signup);
 module.exports = app;
 
 app.listen(3000)
-
 
