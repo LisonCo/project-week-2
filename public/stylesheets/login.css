@@ -1,5 +1,5 @@
 .top-padding {
-  padding-top: 360px;
+  padding-top: 250px;
 }
 
 .background{
@@ -12,10 +12,10 @@
 
 #form {
   margin: 0px auto;
-  width: 380px;
+  width: 90vw;
   border: 1px solid white;
   border-radius: 10px;
-  height: 30vh;
+  height: 40vh;
   line-height: 45px;
 }
 
