@@ -1,4 +1,4 @@
- lisonCSS
+
 const express = require('express');
 const app = express();
 const hbs = require("hbs");
@@ -11,10 +11,14 @@ app.use (express.static('public'))
 const home = require('./routes/home');
 app.use('/', home);
 
+const login = require('./routes/login');
+app.use('/', login);
+
+const signup = require('./routes/signup');
+app.use('/', signup);
+
 module.exports = app;
 
 app.listen(3000)
 
-//new changes
-//second changes
- master
+
