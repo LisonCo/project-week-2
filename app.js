@@ -43,6 +43,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// attaching session data to res.locals, 
+// making it available to all hbs files after this middleware
+app.use(function(req,res,next) {
+  if(req.session.user) res.locals.user = req.session.user;
+  next();
+})
 
 // Routes
 

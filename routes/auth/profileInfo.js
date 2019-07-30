@@ -27,6 +27,4 @@ router.post('/profileInfo', (req, res)=>{
     })
 });
 
-
-
 module.exports = router

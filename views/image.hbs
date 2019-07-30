@@ -8,6 +8,11 @@
     <div class="image-title">
         {{ data.name }}
     </div>
+    <div class="favorite">
+    <form action="/discover/favorite/{{ id }}" method="post">
+      <button type="submit">Favorite</button>
+    </form>
+    </div>
 </div>
 
 {{/pictures}}

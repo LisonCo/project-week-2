@@ -7,9 +7,12 @@
 
     <a href="/discover/{{ id }}"><img src="{{ data.image_files.[0].file_url }}"></a>
     </div>
+    <form action="/discover/favorite/{{ id }}" method="post">
+      <button type="submit">Favorite</button>
+    </form>
     {{/each}}
 
 </div>
 
 
-
+{{> footer }}
