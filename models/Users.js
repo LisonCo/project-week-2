@@ -4,11 +4,14 @@ const mongoose = require("mongoose");
 const Schema   = mongoose.Schema;
 
 
-
 // User Schema
 const userSchema = new Schema({
   username: String,
-  password: String
+  password: String,
+  name: String,
+  birthday: Date,
+  email: String,
+  image: String,
 }, {
   timestamps: true
 });
