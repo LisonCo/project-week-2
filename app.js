@@ -14,7 +14,6 @@ const MongoStore = require("connect-mongo")(session);
 const logger       = require('morgan');
 const cookieParser = require('cookie-parser');
 
-
 // Connect to MongoDB
 mongoose
   .connect('mongodb://localhost/project-week-2', {useNewUrlParser: true})
@@ -38,16 +37,13 @@ app.use(session({
   })
 }));
 
-
 // Middleware Setup
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-
-
-
+// Routes
 const home = require('./routes/home');
 app.use('/', home);
 
@@ -60,13 +56,14 @@ app.use('/', loginSignup);
 const profileInfo = require('./routes/profileInfo')
 app.use('/', profileInfo)
 
-
-
 const image = require ('./routes/images');
 app.use('/', image);
 
 const live = require ('./routes/live');
 app.use('/', live)
+
+const menu = require ('./routes/home');
+app.use('/', menu)
 
 module.exports = app;
 

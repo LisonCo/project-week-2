@@ -1,0 +1,25 @@
+#menu-main-container {
+    margin-top: 8vh;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding-bottom: 5vh;
+}
+
+.round-images {
+    border-radius: 50%;
+    height: 35vh;
+    width: 35vh;
+}
+
+.round-images img {
+    width: 50vw;
+}
+
+.menu-sub-container {
+    width: 100vw;
+    text-align: center;
+    padding-top: 10vh;
+}

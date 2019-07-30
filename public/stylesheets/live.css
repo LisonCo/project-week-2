@@ -1,0 +1,21 @@
+#live-main-container {
+    margin-top: 8vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+    height:92vh;
+    width: 100vw;
+ }
+
+#live-main-container img {
+    padding: 8vh;
+    width: 90%;
+}
+
+#description {
+    color:white;
+    width:60%;
+    text-align: center;
+}

@@ -14,11 +14,11 @@
   background-repeat: no-repeat;
 }
 
-
 .center {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 5vh;
 }
 
 .logo {

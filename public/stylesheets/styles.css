@@ -5,6 +5,8 @@
 @import "error-message.css";
 @import "profileInfo.css";
 @import "image.css";
+@import "live.css";
+@import "menu.css";
 
 body {
     margin: 0;
