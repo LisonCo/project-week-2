@@ -43,10 +43,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// attaching session data to res.locals, 
+// making it available to all hbs files after this middleware
+app.use(function(req,res,next) {
+  if(req.session.user) res.locals.user = req.session.user;
+  next();
+})
 
 // Routes
-=======
-
 const home = require('./routes/home');
 app.use('/', home);
 
@@ -59,7 +63,6 @@ app.use('/', loginSignup);
 const profileInfo = require('./routes/auth/profileInfo')
 app.use('/', profileInfo)
 
-=======
 const profile = require('./routes/profile')
 app.use('/', profile)
 
@@ -74,7 +77,7 @@ app.use('/', menu)
 
 const glossary = require ('./routes/glossary');
 app.use('/', glossary)
-=======
+
 const logout = require ('./routes/auth/logout')
 app.use ('/', logout)
 
