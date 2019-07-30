@@ -45,7 +45,6 @@ app.use(cookieParser());
 
 
 // Routes
-=======
 
 const home = require('./routes/home');
 app.use('/', home);
@@ -59,7 +58,6 @@ app.use('/', loginSignup);
 const profileInfo = require('./routes/auth/profileInfo')
 app.use('/', profileInfo)
 
-=======
 const profile = require('./routes/profile')
 app.use('/', profile)
 
@@ -74,7 +72,7 @@ app.use('/', menu)
 
 const glossary = require ('./routes/glossary');
 app.use('/', glossary)
-=======
+
 const logout = require ('./routes/auth/logout')
 app.use ('/', logout)
 
