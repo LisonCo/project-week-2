@@ -65,6 +65,9 @@ app.use('/', live)
 const menu = require ('./routes/home');
 app.use('/', menu)
 
+const glossary = require ('./routes/glossary');
+app.use('/', glossary)
+
 module.exports = app;
 
 app.listen(3000, ()=>{console.log('App is working on port 3000')})
