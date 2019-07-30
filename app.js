@@ -46,8 +46,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 
-
-
 const home = require('./routes/home');
 app.use('/', home);
 
@@ -57,16 +55,21 @@ app.use('/', discover);
 const loginSignup = require('./routes/auth/users');
 app.use('/', loginSignup);
 
-const profileInfo = require('./routes/profileInfo')
+const profileInfo = require('./routes/auth/profileInfo')
 app.use('/', profileInfo)
 
-
+const profile = require('./routes/profile')
+app.use('/', profile)
 
 const image = require ('./routes/images');
 app.use('/', image);
 
 const live = require ('./routes/live');
 app.use('/', live)
+
+const logout = require ('./routes/auth/logout')
+app.use ('/', logout)
+
 
 module.exports = app;
 

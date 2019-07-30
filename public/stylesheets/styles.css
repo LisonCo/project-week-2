@@ -2,9 +2,10 @@
 @import "home.css";
 @import "discover.css";
 @import "loginSignup.css";
-@import "error-message.css";
+@import "errorMessage.css";
 @import "profileInfo.css";
 @import "image.css";
+@import "profile.css";
 
 body {
     margin: 0;

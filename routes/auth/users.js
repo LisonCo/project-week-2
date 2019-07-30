@@ -19,7 +19,7 @@ router.post('/login', function(req, res, next) {
           if(err) throw new Error 
           if(match) {
             req.session.user = user;
-            res.redirect('/profile')
+            res.redirect(`/profile/${user.id}`)
           } else {
             res.send("invalid credentials.")
           }
@@ -44,7 +44,7 @@ router.post("/signup", (req, res, next) => {
   const password = req.body.password;
   const salt     = bcrypt.genSaltSync(bcryptSalt);
   const hashPass = bcrypt.hashSync(password, salt);
-
+console.log(req.body)
   if (username === "" || password === "") {
       res.render("auth/signup", {
         errorMessage: "Indicate a username and a password to sign up"
@@ -65,7 +65,7 @@ router.post("/signup", (req, res, next) => {
             password: hashPass
           })
           .then((newUser) => {
-            res.redirect("/login");
+            res.redirect(`/profileInfo/${newUser.id}`);
           })
           .catch(error => {
             console.log(error);
@@ -79,8 +79,6 @@ router.post("/signup", (req, res, next) => {
 });
 
 // ---------------------------------------------------
-
-// Fill profile info
 
 
 module.exports = router
