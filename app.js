@@ -51,6 +51,7 @@ app.use(function(req,res,next) {
 })
 
 // Routes
+
 const home = require('./routes/home');
 app.use('/', home);
 

@@ -21,3 +21,28 @@
     width:80%;
     padding: 5vh;
 }
+
+textarea {
+    border-radius: 10px;
+}
+
+.comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.submit {
+    border: 1px solid white;
+    padding: 0px;
+    height: 30px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: white; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
