@@ -1,8 +1,18 @@
 #discover-main-container {
-    height : 90vh;
-    margin : 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-around;
+    margin-top: 8vh;
+    background-color: black;
 }
 
 #discover-main-container img {
-    width : 100px;
+    width: 100%;
+}
+
+.picture-container {
+    width: 80vw;;
+    margin:10vw 10vw 0 10vw;
+    text-align: center;
 }
