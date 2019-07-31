@@ -37,8 +37,8 @@ router.get('/discover', function (req, res) {
 router.get('/discover/:id', function (req, res) {
     const imageID = req.params.id;
     axios.get(`http://hubblesite.org/api/v3/image/${imageID}`)
-    .then((pictures) => {
-        res.render('image', {pictures})
+    .then((picture) => {
+        res.render('image', {picture : picture, id: imageID})
     })
     .catch((err) => {
         console.log(err)
