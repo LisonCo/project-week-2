@@ -1,11 +1,10 @@
 {{> nav }}
 
 <div id="image-main-container">
-{{#pictures}}
 <div id="image-container">
-    <img src="{{ data.image_files.[0].file_url }}">
+    <img src="{{ picture.data.image_files.[0].file_url }}">
     <div class="image-title">
-        {{ data.name }}
+        {{ picture.data.name }}
     </div>
     <div class="favorite">
     <form action="/discover/favorite/{{ id }}" method="post">
@@ -21,7 +20,6 @@
             </div>
         </form>
 </div>
-{{/pictures}}
  {{#comments}}
             <div style="color:white;">{{comment}}</div>
         {{/comments}}

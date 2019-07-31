@@ -12,11 +12,11 @@ const userSchema = new Schema({
   birthday: Date,
   email: String,
   image: String,
+  favorites: Array
 }, {
   timestamps: true
 });
 
 const User = mongoose.model("users", userSchema, "users");
-
 
 module.exports = User;
