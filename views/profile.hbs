@@ -7,20 +7,12 @@
   <div>
     <h1 class="favorites">Favorites</h1>
     <div class="favBorder">
-  {{!-- collection of favorites --}}
 
-  {{!-- <script>
-    for (i=0; i< user.favorites.length ; i++) {
-      axios.get(`http://hubblesite.org/api/v3/image/${user.favorites[i]}`)
-    }
-    .then(())
-    .catch((err) => {
-        console.log(err)
-     })
-})
-  </script> --}}
-  
-
+      {{#each favorites}}
+      <img src="{{image_files.[0].file_url}}">
+      {{/each}}
     </div>
   </div>
 </div>
+
+{{> footer }}

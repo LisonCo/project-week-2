@@ -1,0 +1,15 @@
+#glossary-main-container {
+    margin-top: 8vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.word-container {
+    width: 80%;
+    background-color: #09092a;
+    color:white;
+    padding: 2vh;
+}

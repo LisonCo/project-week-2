@@ -65,6 +65,7 @@ router.post('/discover/favorite/:id', (req, res) => {
      })
 })
 
+// Route to post a comment
 router.post('/addComment/:id', (req, res)=>{
     const imageID = req.params.id;
     const comment = req.body.comments
@@ -75,7 +76,6 @@ router.post('/addComment/:id', (req, res)=>{
         res.redirect(`/discover/${imageID}`)
     })
 })
-
 
 module.exports = router
 

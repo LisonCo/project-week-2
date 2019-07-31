@@ -7,9 +7,11 @@
         {{ picture.data.name }}
     </div>
     <div class="favorite">
+
     <form action="/discover/favorite/{{ id }}" method="post">
       <button class="favoriteBTN" type="submit">Favorite</button>
     </form>
+    
     </div>  
      <form action="/addComment/{{id}}" method="post">
             <div class="comment">
