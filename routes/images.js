@@ -39,12 +39,12 @@ router.get('/discover/:id', function (req, res) {
     const imageID = req.params.id;
     
     axios.get(`http://hubblesite.org/api/v3/image/${imageID}`)
-    .then((pictures) => {
-        console.log(pictures)
+    .then((picture) => {
+        console.log(picture)
         Comment.find({imageID})
         .then(comments=>{
             console.log(comments)
-            res.render('image', {pictures: pictures, id: imageID, comments: comments})
+            res.render('image', {picture: picture, id: imageID, comments: comments})
         })  
     })
     .catch((err) => {
