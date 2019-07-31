@@ -36,7 +36,6 @@ router.get('/discover', function (req, res) {
 
 // Page that displays one specific picture
 router.get('/discover/:id', function (req, res) {
-    //trying to fix it
     const imageID = req.params.id;
     
     axios.get(`http://hubblesite.org/api/v3/image/${imageID}`)
@@ -53,7 +52,6 @@ router.get('/discover/:id', function (req, res) {
      })
 })
 
-
 // Route to save a picture as favorite
 router.post('/discover/favorite/:id', (req, res) => {
     let imageID = req.params.id;
@@ -67,10 +65,7 @@ router.post('/discover/favorite/:id', (req, res) => {
      })
 })
 
-
-
-//route that only tatiane has
-
+// Route to post a comment
 router.post('/addComment/:id', (req, res)=>{
     const imageID = req.params.id;
     const comment = req.body.comments
