@@ -43,6 +43,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// defining custom route protection middleware
+let protectRoute = function(req, res, next) {
+  if(req.session.user) next();
+  else {res.redirect("/login")}
+}
+
 // attaching session data to res.locals, 
 // making it available to all hbs files after this middleware
 app.use(function(req,res,next) {
@@ -55,33 +61,32 @@ app.use(function(req,res,next) {
 const home = require('./routes/home');
 app.use('/', home);
 
-const discover = require ('./routes/images');
-app.use('/', discover);
-
-const loginSignup = require('./routes/auth/users');
-app.use('/', loginSignup);
-
 const profileInfo = require('./routes/auth/profileInfo')
 app.use('/', profileInfo)
-
-const profile = require('./routes/profile')
-app.use('/', profile)
-
-const image = require ('./routes/images');
-app.use('/', image);
-
-const live = require ('./routes/live');
-app.use('/', live)
-
-const menu = require ('./routes/home');
-app.use('/', menu)
-
-const glossary = require ('./routes/glossary');
-app.use('/', glossary)
 
 const logout = require ('./routes/auth/logout')
 app.use ('/', logout)
 
+const loginSignup = require('./routes/auth/users');
+app.use('/', loginSignup);
+
+const profile = require('./routes/profile')
+app.use('/', protectRoute, profile)
+
+const image = require ('./routes/images');
+app.use('/', protectRoute, image);
+
+const live = require ('./routes/live');
+app.use('/', protectRoute, live)
+
+const menu = require ('./routes/home');
+app.use('/', protectRoute, menu)
+
+const glossary = require ('./routes/glossary');
+app.use('/', protectRoute, glossary)
+
+const discover = require ('./routes/images');
+app.use('/', protectRoute, discover);
 
 module.exports = app;
 

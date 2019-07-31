@@ -7,6 +7,7 @@ router.get('/profile/:id', function (req, res) {
     User.findById(req.params.id)
     .then(oneUser => {
         const favorites = oneUser.favorites
+        console.log(`favorites ${favorites}`)
         var getPromises = [];
         for (i=0; i< favorites.length; i++){
             getPromises.push(axios.get(`http://hubblesite.org/api/v3/image/${favorites[i]}`).then(response => response.data))
