@@ -3,6 +3,7 @@ const router  = express.Router();
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const User = require("../models/Users");
+const Comment = require("../models/Comment");
 
 // Page that displays all the pictures
 router.get('/discover', function (req, res) {
@@ -36,9 +37,15 @@ router.get('/discover', function (req, res) {
 // Page that displays one specific picture
 router.get('/discover/:id', function (req, res) {
     const imageID = req.params.id;
+    
     axios.get(`http://hubblesite.org/api/v3/image/${imageID}`)
-    .then((picture) => {
-        res.render('image', {picture : picture, id: imageID})
+    .then((pictures) => {
+        console.log(pictures)
+        Comment.find({imageID})
+        .then(comments=>{
+            console.log(comments)
+            res.render('image', {pictures: pictures, id: imageID, comments: comments})
+        })  
     })
     .catch((err) => {
         console.log(err)
@@ -58,4 +65,18 @@ router.post('/discover/favorite/:id', (req, res) => {
      })
 })
 
+router.post('/addComment/:id', (req, res)=>{
+    const imageID = req.params.id;
+    const comment = req.body.comments
+
+    Comment.create({comment, imageID})
+    .then(()=>{
+        console.log('Comment has been added')
+        res.redirect(`/discover/${imageID}`)
+    })
+})
+
+
 module.exports = router
+
+
