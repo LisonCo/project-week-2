@@ -35,6 +35,7 @@ router.get('/discover', function (req, res) {
 
 // Page that displays one specific picture
 router.get('/discover/:id', function (req, res) {
+    //trying to fix it
     const imageID = req.params.id;
     axios.get(`http://hubblesite.org/api/v3/image/${imageID}`)
     .then((picture) => {
