@@ -36,6 +36,7 @@ router.get('/discover', function (req, res) {
 
 // Page that displays one specific picture
 router.get('/discover/:id', function (req, res) {
+    //trying to fix it
     const imageID = req.params.id;
     
     axios.get(`http://hubblesite.org/api/v3/image/${imageID}`)
@@ -52,6 +53,24 @@ router.get('/discover/:id', function (req, res) {
      })
 })
 
+
+// router.get('/discover/:id', function (req, res) {
+//     const imageID = req.params.id;
+    
+//     axios.get(`http://hubblesite.org/api/v3/image/${imageID}`)
+//     .then((pictures) => {
+//         console.log(pictures)
+//         Comment.find({imageID})
+//         .then(comments=>{
+//             console.log(comments)
+//             res.render('image', {pictures: pictures, id: imageID, comments: comments})
+//         })  
+//     })
+//     .catch((err) => {
+//         console.log(err)
+//      })
+// })
+
 // Route to save a picture as favorite
 router.post('/discover/favorite/:id', (req, res) => {
     let imageID = req.params.id;
@@ -65,6 +84,10 @@ router.post('/discover/favorite/:id', (req, res) => {
      })
 })
 
+
+
+//route that only tatiane has
+
 router.post('/addComment/:id', (req, res)=>{
     const imageID = req.params.id;
     const comment = req.body.comments
@@ -75,7 +98,6 @@ router.post('/addComment/:id', (req, res)=>{
         res.redirect(`/discover/${imageID}`)
     })
 })
-
 
 module.exports = router
 
