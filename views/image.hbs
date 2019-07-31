@@ -1,7 +1,6 @@
 {{> nav }}
 
 <div id="image-main-container">
-
 {{#pictures}}
 <div id="image-container">
     <img src="{{ data.image_files.[0].file_url }}">
@@ -12,28 +11,56 @@
     <form action="/discover/favorite/{{ id }}" method="post">
       <button type="submit">Favorite</button>
     </form>
-    </div>
+    </div>  
+     <form action="/addComment/{{../id}}" method="post">
+            <div class="comment">
+                <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+                </textarea>
+                <input class="submit" type="submit" value="Submit">
+                <input class="submit" type="reset" value="Reset">
+            </div>
+        </form>
 </div>
-
 {{/pictures}}
+ {{#comments}}
+            <div style="color:white;">{{comment}}</div>
+        {{/comments}}
 
 
+{{!-- Posted Comments --}}
 
 
-
-
-
-
-    <form action="/image" method="post">
-        <div class="comment">
-            <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
-            Comment
-            </textarea>
-            <input class="submit" type="submit" value="Submit">
-            <input class="submit" type="reset" value="Reset">
-        </div>
-    </form>
-    
+{{!-- <div class="content">
+  <div class="comments">
+    <div class="editor">
+      <div class="editor-header">
+        <a href='#' data-role='bold'>B</a>
+        <a href='#' data-role='italic'>I</a>
+        <a href='#' data-role='underline'>U</a>
+        <a href='#' data-role='justifyleft'><i class="menu-left"></i></a>
+        <a href='#' data-role='justifycenter'><i class="menu-center"></i></a>
+        <a href='#' data-role='justifyright'><i class="menu-right"></i></a>
+      </div>
+      <div id="text" class="editor-content" contenteditable>
+        <p>Let's make a statement!</p>
+        <p>This is an italicised sentence.</p>
+        <p>Very important information.</p>
+      </div>
+    </div>
+    <div class="insert-text">
+      <span class="loading">Loading...</span>
+      <span class="total-comment"></span>
+      <p>
+        <input type="submit" value="Comment" />
+      </p>
+    </div>
+    <div class="list-comments">
+      <div>Hello!</div>
+      <div>My name's Tuan Linh.</div>
+    </div>
+  </div>
+</div> --}}
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 {{> footer}}
