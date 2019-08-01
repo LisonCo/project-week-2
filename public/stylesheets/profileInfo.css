@@ -39,8 +39,8 @@
   width: 90vw;
   border: 1px solid white;
   border-radius: 10px;
-  height: 60vh;
-  line-height: 30px;
+  height: 55vh;
+  line-height: 25px;
 }
 
 
@@ -78,8 +78,56 @@
   width: 100%;
 }
 
+#form2 select {
+  border: none;
+  height: 25px;
+  background-color: white;
+  /* margin: 10px 0 8px 0; */
+}
+
 #form2 button:hover {
   background: #fff;
   color: #09092a;
   transition: .3s ease background;
+}
+
+@media only screen and (min-device-width: 1000px) {
+
+  .name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 70px;
+  }
+
+  #form2 {
+    margin: 0px auto;
+    width: 30vw;
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 45vh;
+    line-height: 30px;
+  }
+
+  #form2 input,
+#form2 button {
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: 0;
+  padding: 4px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 30px;
+}
+
+#form2 select {
+  border: none;
+  height: 25px;
+  background-color: white;
+  margin: 10px 0 8px 0;
+}
+
 }

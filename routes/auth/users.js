@@ -16,16 +16,26 @@ router.post('/login', function(req, res, next) {
     .then((user)=> {
       if(user) {
         bcrypt.compare(req.body.password, user.password, function(err, match){
-          if(err) throw new Error 
+          if(err) {res.render("auth/login", {
+            errorMessage: "Username or password is incorrect"
+          });
+          return;
+        }
           if(match) {
             req.session.user = user;
-            res.redirect(`/profile/${user.id}`)
+            res.redirect(`/menu`)
           } else {
-            res.send("invalid credentials.")
+            res.render("auth/login", {
+              errorMessage: "Username or password is incorrect"
+            });
+            return;
           }
         });
       } else {
-        res.send("invalid credentials.");
+        res.render("auth/login", {
+          errorMessage: "Username or password is incorrect"
+        });
+        return;
       }
     });
 });
@@ -39,7 +49,6 @@ router.get('/signup', function(req, res, next) {
 
 // Fill signup page
 router.post("/signup", (req, res, next) => {
-  debugger
   const username = req.body.username;
   const password = req.body.password;
   const salt     = bcrypt.genSaltSync(bcryptSalt);
