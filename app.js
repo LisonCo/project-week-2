@@ -17,7 +17,7 @@ require("dotenv").config();
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.DB, {useNewUrlParser: true})
+  .connect(process.env.MONGODB_URI, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -28,7 +28,7 @@ mongoose
 
 // configuring express session
 app.use(session({
-  secret: 'super secret',
+  secret: process.env.SECRET,
   resave: true,
   saveUninitialized: false,
 }));
@@ -85,6 +85,6 @@ const discover = require ('./routes/images');
 app.use('/', protectRoute, discover);
 
 module.exports = app;
-
-app.listen(3000, ()=>{console.log('App is working on port 3000')})
+let port = process.env.PORT || 3000
+app.listen(port, ()=>{console.log('App is working on port 3000')})
 
