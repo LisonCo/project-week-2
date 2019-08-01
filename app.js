@@ -31,6 +31,10 @@ app.use(session({
   secret: process.env.SECRET,
   resave: true,
   saveUninitialized: false,
+  store: new MongoStore({
+    ttl: 24 * 60 * 60,
+    url: process.env.MONGODB_URI
+  })
 }));
 
 // Middleware Setup
