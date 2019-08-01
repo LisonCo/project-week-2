@@ -8,11 +8,21 @@
 }
 
 #discover-main-container img {
-    width: 100%;
+    width: 80%;
 }
 
 .picture-container {
-    width: 80vw;;
-    margin:10vw 10vw 0 10vw;
+    width: 45vw;
+    margin-top: 7vw;
     text-align: center;
+}
+
+.favorite-button {
+    background-color: #09092a;
+    color:white;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 1em;
+    padding: 0.5em;
+    margin-top: 2vh;
 }

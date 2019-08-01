@@ -12,14 +12,6 @@
   justify-content: center;
 }
 
-.logo {
-  height: 15vh;
-  width: 30vw;
-  margin: 0 auto;
-  margin-top: 60px;
-  margin-bottom: 15px;
-}
-
 .name {
   display: flex;
   flex-direction: row;
