@@ -37,7 +37,7 @@
     "path": "^0.12.7",
     "serve-favicon": "^2.5.0"
   },
-  "environments": {
+  "engines": {
     "node": "10.x"
   }
 }
