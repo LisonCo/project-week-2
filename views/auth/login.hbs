@@ -1,7 +1,7 @@
 <div class="background">
   <div class="center">
     <image class="logo" src="https://image.flaticon.com/icons/svg/167/167323.svg"></image>
-    <h1 class="name">Project Name</h1>
+    <h1 class="name">Space Explorer</h1>
   </div>
   <form id="form" action="/login" method="POST">
     <label for="username">Username</label><br>
@@ -12,6 +12,9 @@
     <input type="password" name="password"
       placeholder="********">
 
+    {{#if errorMessage}}
+      <div class="error-message">{{ errorMessage }}</div>
+    {{/if}}
     <button type="submit">Login</button>
   </form>
 </div>
