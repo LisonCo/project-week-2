@@ -13,10 +13,11 @@ const session = require('express-session')
 const MongoStore = require("connect-mongo")(session);
 const logger       = require('morgan');
 const cookieParser = require('cookie-parser');
+require("dotenv").config();
 
 // Connect to MongoDB
 mongoose
-  .connect('mongodb://localhost/project-week-2', {useNewUrlParser: true})
+  .connect(process.env.DB, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
