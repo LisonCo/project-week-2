@@ -2,17 +2,19 @@
 <div class="new-background">
   <div class="andPicture">
     <img class="profPic" src="../{{user.image}}"></img>
+    <div class="vertical">
+      <h1 class="name2">{{user.name}}</h1>
+      <h2 class="name2">{{user.email}}</h2>
+    </div>
   </div>
-  <h1 class="name2">{{user.name}}</h1>
   <div>
     <h1 class="favorites">Favorites</h1>
     <div class="favBorder">
 
       {{#each favorites}}
-      <img src="{{image_files.[0].file_url}}">
+        <img class="imgFav" src="{{image_files.[0].file_url}}">
       {{/each}}
     </div>
   </div>
 </div>
-
 {{> footer }}

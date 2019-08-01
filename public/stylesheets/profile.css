@@ -1,9 +1,6 @@
 .new-background {
-  background-image: url('../images/profileBackground.jpg');
+  background-color: black;
   width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .andPicture {
@@ -22,20 +19,67 @@
 }
 
 .favBorder {
+  margin: 0 auto;
   border: 1px solid white;
-  height: 30vh;
+  width: 95%;
+}
+
+.imgFav {
+  width: 49%;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  margin-left: -88px;
 }
 
 .name2 {
+  padding-top: 9vh;
+  margin-bottom: -60px;
   color: white;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 60%;
 }
 
 .profPic {
-  width: 200px;
+  width: 275px;
   height: 200px;
   border-radius: 50%;
-  padding-top: 20px;
+  padding-top: 40px;
+}
+
+@media only screen and (min-device-width: 1000px) {
+  .vertical {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .favorites {
+    padding-top: 100px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .profPic {
+    width: 275px;
+    height: 200px;
+    border-radius: 50%;
+    padding-top: 8vh;
+  }
+
+  .name2 {
+    padding-top: 9vh;
+    margin-bottom: -70px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 50px;
+  }
 }

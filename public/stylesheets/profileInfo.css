@@ -74,7 +74,6 @@
   border: none;
   height: 25px;
   background-color: white;
-  /* margin: 10px 0 8px 0; */
 }
 
 #form2 button:hover {
@@ -99,7 +98,7 @@
     width: 30vw;
     border: 1px solid white;
     border-radius: 20px;
-    height: 45vh;
+    height: 50vh;
     line-height: 30px;
   }
 
@@ -120,6 +119,7 @@
   height: 25px;
   background-color: white;
   margin: 10px 0 8px 0;
+  width: 100%;
 }
 
 }
