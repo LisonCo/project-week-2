@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     width: 100vw;
     padding-bottom: 5vh;
+    height:92vh;
 }
 
 .round-images {
@@ -15,11 +16,28 @@
 }
 
 .round-images img {
-    width: 50vw;
+    width: 40vw;
 }
 
 .menu-sub-container {
-    width: 100vw;
+    width: 33vw;
     text-align: center;
-    padding-top: 10vh;
+    padding-top: 25vh;
+    position: relative;
+    color: white;
+}
+
+.menu-sub-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.title {
+    position: absolute;
+    top: 48%;
+    left: 22%;
+    font-family: 'Righteous', cursive;
+    letter-spacing: 2px;
+    font-size: 2em;
+    text-decoration: none;
 }

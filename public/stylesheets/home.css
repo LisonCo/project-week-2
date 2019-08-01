@@ -6,12 +6,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
 }
 
 #home-main-container h1 {
     color: white;
+    margin-top: 1vh;
+    font-family: 'Righteous', cursive;
+    letter-spacing: 2px;
 }
+
+.home-logo {
+    width: 15vw;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 15px;
+  }
 
 .main-logo {
     padding: 2vh;
@@ -21,25 +30,30 @@
 }
 
 #text-container {
-    width: 60%;
     background-color: #09092a;
     color: white;
     padding: 3vh;
     text-align: center;
     border-radius: 25px;
+    margin-top: 3vh;
+    font-size: 1.3em;
 }
 
 #home-main-container button {
   border: 1px solid #09092a;
-  border-radius: 4px;
+  border-radius: 25px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
   padding: 10px 16px;
-  text-decoration: none;
   text-transform: uppercase;
   transition: .3s ease background;
-  width: 60%;
   background: #09092a;
+  margin-top: 5vh;
+}
+
+#home-main-container a {
+    text-decoration: none;
+    color: white;
 }

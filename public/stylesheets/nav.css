@@ -3,18 +3,22 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 8%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 1%;
     background-color: #09092a;
     color: white;
     border-bottom: 1px solid black;
     align-items: center;
+    font-family: 'Righteous', cursive;
+    letter-spacing: 2px;
+    font-size: 1.2em;
 }
 
 #nav-main-container img {
-    width: 5vw;
+    width: 4vw;
+    margin-right: 1.5vw;
 }
 
 .flex-container {
@@ -25,11 +29,16 @@
 
 #nav-left-container {
   margin-right: 130px;
-  width: 20%;
+  width: 15%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding-left: 1%;
+}
+
+#nav-main-container a {
+    text-decoration: none;
+    color: white;
 }
 
 #nav-right-container {
@@ -37,6 +46,7 @@
     display:flex;
     justify-content: flex-end;
     align-items:center;
+    padding-right:5vw;
 }
 
 nav ul {
@@ -45,12 +55,14 @@ nav ul {
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
+    background-color: #09092a;
+    color:white;
+    font-size:1.2em;
+    padding: 10px;
     font-size: 16px;
     border: none;
     border-radius: 10px;
+    font-family: 'Righteous', cursive;
   }
   
 /* The container <div> - needed to position the dropdown content */
@@ -63,7 +75,7 @@ nav ul {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #09092a;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -71,29 +83,17 @@ nav ul {
   
   /* Links inside the dropdown */
   .dropdown-content a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: #ddd; color:#09092a}
   
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-
-/* Media query 
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    padding-right: 5%;
-    text-decoration: none;
-} */
-}
+.dropdown:hover .dropbtn {background-color: #09092a; color: #09092a}
