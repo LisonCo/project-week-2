@@ -28,13 +28,8 @@ mongoose
 // configuring express session
 app.use(session({
   secret: 'super secret',
-  cookie: { maxAge: 60000 },
   resave: true,
   saveUninitialized: false,
-  store: new MongoStore({
-    mongooseConnection: mongoose.connection,
-    ttl: 24 * 60 * 60 // 1 day
-  })
 }));
 
 // Middleware Setup
