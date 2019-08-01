@@ -52,18 +52,29 @@ router.get('/discover/:id', function (req, res) {
      })
 })
 
-// Route to save a picture as favorite
+// Route to save a picture as favorite/remove a picture
 router.post('/discover/favorite/:id', (req, res) => {
     let imageID = req.params.id;
-    let userID = req.session.user._id
-    User.updateOne({"_id": userID}, {"$push": {"favorites": imageID}}, {new: true})
-    .then((user) => {
-        console.log("saved")
-    })
-    .catch((err) => {
-        console.log(err)
-     })
+    let userID = req.session.user._id;
+    if(req.session.user.favorites.includes(imageID)){
+        User.updateOne({"_id": userID}, {"$pull": {"favorites": imageID}})
+        .then(() => {
+            console.log("favorite removed")
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    } else {
+        User.updateOne({"_id": userID}, {"$push": {"favorites": imageID}}, {new: true})
+        .then(() => {
+            console.log("favorite added")
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
 })
+
 
 // Route to post a comment
 router.post('/addComment/:id', (req, res)=>{
