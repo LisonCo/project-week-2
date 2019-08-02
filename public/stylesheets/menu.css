@@ -41,3 +41,40 @@
     font-size: 2em;
     text-decoration: none;
 }
+
+@media only screen and (max-device-width: 768px) {
+
+    #menu-main-container {
+        margin-top: 8vh;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100vw;
+        height:220vh;
+        
+    }
+    .menu-sub-container {
+        width: 100vw;
+        text-align: center;
+        padding-top: 5vh;
+        position: relative;
+        color: white;
+    }
+
+    .title {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        font-family: 'Righteous', cursive;
+        letter-spacing: 2px;
+        font-size: 2em;
+        text-decoration: none;
+    }
+
+    .live {
+        padding-bottom: -300px;
+    }
+
+    
+}

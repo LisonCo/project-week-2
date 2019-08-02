@@ -22,6 +22,10 @@
     margin-bottom: 15px;
   }
 
+  .pop {
+      font-size: 50px;
+  }
+
 .main-logo {
     padding: 2vh;
     display: flex;
@@ -40,7 +44,7 @@
 }
 
 #home-main-container button {
-  border: 1px solid #09092a;
+  border: 1px solid white;
   border-radius: 25px;
   color: #fff;
   cursor: pointer;
