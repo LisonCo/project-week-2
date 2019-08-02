@@ -66,24 +66,29 @@ router.get('/discover/:id', function (req, res) {
 router.post('/discover/favorite/:id', (req, res) => {
     let imageID = req.params.id;
     let userID = req.session.user._id;
-    if(req.session.user.favorites.includes(imageID)){
-        User.updateOne({"_id": userID}, {"$pull": {"favorites": imageID}})
-        .then(() => {
-            console.log("favorite removed")
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-    } else {
-        User.updateOne({"_id": userID}, {"$push": {"favorites": imageID}}, {new: true})
-        .then(() => {
-            console.log("favorite added")
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-    }
+    User.findById(req.session.user._id)
+        .then((user) => {
+        let {favorites} = user;
+        if(favorites.includes(imageID)){
+            User.updateOne({"_id": userID}, {"$pull": {"favorites": imageID}})
+                .then((reponse) => {
+                res.send({favorite: false})
+                })
+                .catch((err) => {
+                console.log(err)
+                })
+        } else {
+            User.updateOne({"_id": userID}, {"$push": {"favorites": imageID}}, {new: true})
+            .then((response) => {
+                res.send({favorite: true})
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+            }
+    })
 })
+    
 
 // Route to post a comment
 router.post('/addComment/:id', (req, res)=>{

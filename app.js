@@ -71,8 +71,7 @@ app.use('/', loginSignup);
 const profile = require('./routes/profile')
 app.use('/', protectRoute, profile)
 
-const image = require ('./routes/images');
-app.use('/', protectRoute, image);
+app.use('/', protectRoute, require ('./routes/images'));
 
 const live = require ('./routes/live');
 app.use('/', protectRoute, live)
