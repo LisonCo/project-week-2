@@ -19,7 +19,8 @@ router.post('/profileInfo', (req, res)=>{
     const { name, birthday, email } = req.body;
     User.updateOne({_id: req.query.users_id}, { $set: { name, birthday, email, image }}, {new: true })
     .then((user) => {
-        console.log(user)
+        console.log(user);
+        req.session.user = user;
         res.redirect(`/profile/${req.query.users_id}`)
     })
     .catch((error) => {
