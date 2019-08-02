@@ -1,7 +1,7 @@
 {{> nav}}
 
 <div id="image-main-container">
-<div id="image-container">
+  <div id="image-container">
     <img src="{{ picture.data.image_files.[0].file_url }}">
     <div class="image-title">
         {{ picture.data.name }}
@@ -9,7 +9,6 @@
     <div class="favorite">
       <button type="submit" class="favorite-button" onclick="favoriteImage(event, {{id}});"><i class='far fa-heart'></i></button>
     </div>
-    
     </div>  
      <form action="/addComment/{{id}}" method="post">
             <div class="comment">
@@ -18,7 +17,6 @@
                 <button class="submit" type="reset" value="Reset">Reset</button>
             </div>
       </form>
-</div>
   <div class="comments-response-container flex-container">
       {{#comments}}
         <div class="writComments">
@@ -30,7 +28,7 @@
           
         </div>
       {{/comments}}
-  </div>
+</div>
  
 
 </div>

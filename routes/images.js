@@ -50,7 +50,7 @@ router.get('/discover/:id', function (req, res) {
     
     axios.get(`http://hubblesite.org/api/v3/image/${imageID}`)
     .then((picture) => {
-        console.log(picture)
+        picture.data.name = picture.data.name.replace("HUBBLE FAVORITE: ", "")
         Comment.find({imageID})
         .then(comments=>{
             console.log(comments)
