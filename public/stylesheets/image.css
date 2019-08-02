@@ -20,7 +20,9 @@
 .image-title {
     color: white;
     width:80%;
-    padding: 5vh;
+    padding: 3vh;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .favoriteBTN {

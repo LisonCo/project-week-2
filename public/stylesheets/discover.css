@@ -18,11 +18,11 @@
 }
 
 .favorite-button {
-    background-color: #09092a;
-    color:white;
-    border: 1px solid white;
-    border-radius: 20px;
-    font-size: 1em;
-    padding: 0.5em;
+    background-color: black;
+    color: rgb(253, 206, 78);
+    border: 2px solid rgb(253, 206, 78);
+    border-radius: 50%;
+    font-size: 1.3em;
+    padding: 0.5em 0.5em 0.4em 0.5em;
     margin-top: 2vh;
 }

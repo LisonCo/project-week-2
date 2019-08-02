@@ -13,6 +13,7 @@
     margin-top: 1vh;
     font-family: 'Righteous', cursive;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 .home-logo {
@@ -23,7 +24,7 @@
   }
 
   .pop {
-      font-size: 50px;
+      font-size: 4em;
   }
 
 .main-logo {
@@ -44,7 +45,7 @@
 }
 
 #home-main-container button {
-  border: 1px solid white;
+  border: 1.5px solid white;
   border-radius: 25px;
   color: #fff;
   cursor: pointer;
@@ -60,4 +61,5 @@
 #home-main-container a {
     text-decoration: none;
     color: white;
+    font-size: 1.3em;
 }
