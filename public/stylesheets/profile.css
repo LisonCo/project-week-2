@@ -43,6 +43,7 @@
   flex-direction: row;
   justify-content: center;
   width: 60%;
+  margin-left: -85px;
 }
 
 .profPic {
@@ -50,6 +51,7 @@
   height: 200px;
   border-radius: 50%;
   padding-top: 40px;
+  margin-left: 50px;
 }
 
 @media only screen and (min-device-width: 1000px) {
@@ -59,7 +61,7 @@
   }
 
   .favorites {
-    padding-top: 100px;
+    padding-top: 20px;
     color: white;
     display: flex;
     flex-direction: row;
@@ -74,12 +76,16 @@
   }
 
   .name2 {
-    padding-top: 9vh;
+    padding-top: 11vh;
     margin-bottom: -70px;
     color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: 50px;
+    margin-left: 150px;
   }
+
+  .imgFav {
+    width: 24%;
+    padding-left: 10px;
 }
