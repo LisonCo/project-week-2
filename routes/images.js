@@ -23,6 +23,7 @@ router.get('/discover', function (req, res) {
                 for(let index in picturesInfo) {
                     picturesInfo[index].id = picturesIds[index];
                 }
+                shuffle(picturesInfo);
                 res.render('discover', {pictures : picturesInfo});
             })
             .catch((error)=> {
@@ -33,6 +34,15 @@ router.get('/discover', function (req, res) {
         console.log(err)
      })
 })
+
+// Function to shuffle an array
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
 
 // Page that displays one specific picture
 router.get('/discover/:id', function (req, res) {
@@ -74,7 +84,6 @@ router.post('/discover/favorite/:id', (req, res) => {
         })
     }
 })
-
 
 // Route to post a comment
 router.post('/addComment/:id', (req, res)=>{

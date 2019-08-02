@@ -5,14 +5,13 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items:center;
-    height:92%;
+    height:100%;
     width: 100vw;
  }
 
 #live-image {
     padding-top: 8vh;
     padding-bottom: 8vh;
-    border: 2px solid rgb(253, 206, 78);
 }
 
 #description {

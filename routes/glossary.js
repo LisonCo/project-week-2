@@ -6,7 +6,6 @@ router.get('/glossary', function (req, res) {
     axios.get('http://hubblesite.org/api/v3/glossary?page=all')
     .then((response)=> {
         res.render('glossary', {glossary : response.data})
-        console.log(response.data)
     })
     .catch((error)=> {
         console.log(error)

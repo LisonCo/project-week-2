@@ -27,15 +27,15 @@
     color: white;
 }
 
-.menu-sub-container a {
+#menu-main-container a {
     text-decoration: none;
     color: white;
 }
 
 .title {
     position: absolute;
-    top: 48%;
-    left: 22%;
+    top: 62%;
+    left: 20%;
     font-family: 'Righteous', cursive;
     letter-spacing: 2px;
     font-size: 2em;

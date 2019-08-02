@@ -14,6 +14,7 @@
     font-family: 'Righteous', cursive;
     letter-spacing: 2px;
     font-size: 1.2em;
+    z-index: 1;
 }
 
 #nav-main-container img {

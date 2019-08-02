@@ -25,7 +25,6 @@ mongoose
     console.error('Error connecting to mongo', err)
   });
 
-
 // configuring express session
 app.use(session({
   secret: 'super secret',
@@ -46,7 +45,6 @@ let protectRoute = function(req, res, next) {
 }
 
 // attaching session data to res.locals, 
-// making it available to all hbs files after this middleware
 app.use(function(req,res,next) {
   if(req.session.user) res.locals.user = req.session.user;
   next();
