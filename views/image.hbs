@@ -7,10 +7,8 @@
         {{ picture.data.name }}
     </div>
     <div class="favorite">
-
-    <form action="/discover/favorite/{{ id }}" method="post">
-      <button class="favorite-button" type="submit">Favorite</button>
-    </form>
+      <button type="submit" class="favorite-button" onclick="favoriteImage(event, {{id}});"><i class='far fa-heart'></i></button>
+    </div>
     
     </div>  
      <form action="/addComment/{{id}}" method="post">
@@ -36,6 +34,7 @@
  
 
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
+<script src="/javascripts/favorite-button.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>

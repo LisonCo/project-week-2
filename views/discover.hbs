@@ -4,13 +4,12 @@
 
     {{#each pictures}}
     <div class="picture-container">
-
-    <a href="/discover/{{ id }}"><img src="{{ data.image_files.[0].file_url }}"></a>
-    <form action="/discover/favorite/{{ id }}" method="post">
-      <button type="submit" class="favorite-button">Favorite</button>
-    </form>
+      <a href="/discover/{{ id }}"><img src="{{ data.image_files.[0].file_url }}"></a>
+      <div><button type="submit" class="favorite-button" onclick="favoriteImage(event, {{id}});"><i class='far fa-heart'></i></button></div>
     </div>
     {{/each}}
 
 </div>
 
+<script src="/javascripts/favorite-button.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
