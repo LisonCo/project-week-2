@@ -10,6 +10,7 @@
       <button type="submit" class="favorite-button" onclick="favoriteImage(event, {{id}});"><i class='far fa-heart'></i></button>
     </div>
     </div>  
+
      <form action="/addComment/{{id}}" method="post">
             <div class="comment">
                 <input name="comments" id="comments" placeholder="comment here"/>
@@ -17,6 +18,7 @@
                 <button class="submit" type="reset" value="Reset">Reset</button>
             </div>
       </form>
+      
   <div class="comments-response-container flex-container">
       {{#comments}}
         <div class="writComments">
